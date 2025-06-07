@@ -1,0 +1,50 @@
+/* src/styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset default margin, padding, and set full height/width */
+html, body, #__next {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Make sure all elements use border-box */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(200, 200, 200, 0.2);
+}
+
+/* Smooth transitions for dark mode changes */
+html {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Body defaults */
+body {
+  @apply bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200;
+  /* Prevent body from collapsing, take full height */
+  min-height: 100vh;
+}
+
+/* Ensure card backgrounds adapt */
+.card {
+  @apply bg-white dark:bg-gray-800;
+}
+
